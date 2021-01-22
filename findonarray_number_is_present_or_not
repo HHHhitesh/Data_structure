@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+// unsorted array a[]=1,2,3,............n elements
+// k= 1/23/63.......... is present or not
+
+
+//add a function "findnumber" function which have 2 parameter=1
+int findNumber(int arr[],int n,int a){
+	int pos=-1;
+	for(int i=0;i<=n;i++){
+		if(arr[i]==a)
+		{
+			pos=i;
+			break;
+		}
+	}
+	return pos;
+}
+// 1. arr 
+//2. k is searched
+// the function must return a string "YES" OR "NO" PRESENT OR NOT
+int main(){
+    int a,pos;
+    int arr[]={2,2,3,4,5};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    cin>>a;
+    pos=findNumber(arr,n,a);
+    if(pos==-1)
+    	cout<<"NO";
+     else
+    	cout<<"YES";
+    
+    return 0;
+}
